@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root
+{
+    --CoresPrima: #070606;
+    --coresSecun: #454444; 
+}
+ /* organizaçao da header*/
+
+header
+{
+    background-color: rgb(13, 11, 11);
+    font-family: sans-serif;
+    padding: 20px; /* espaçamento interno */
+    display: flex; /* exibe os elementos como flexiveis */
+    justify-content: space-between; /* distribui o espaço entre os itens */
+    border-bottom: 2px solid var(--CoresPrima); /* adiciona uma borda inferior */
+    align-items: center;
+}
+
+header .logo
+{
+    font-size: 28px; /* tamanho da fonte */
+    font-weight: bold; /* peso da fonte */
+}
+
+header a
+{
+    transition: color 0.5s; /* transiçao suave da cor */
+    color: white; 
+    font-size: 15px;
+}
+
+header a:hover
+{
+    color: var(--CoresPrima); /* cor dos links ao passar o mouse */
+}
+
+
+header ul, li, a
+{
+    display: flex;
+    text-decoration: none; /* remove a decoraçao de texto */
+    gap: 17px; /* espaçamento entre os itens */
+   
+}
+
+
+/*organizaçao da body*/
+
+h3
+{
+    font-family: sans-serif;
+    padding: 22px;
+    color: var(--CoresPrima);
+    font-size: 26px;
+    text-align: center; /* alinhamento de texto */
+}
+
+section
+{
+    padding: 22px;
+    display: flex;
+    color: var(--coresSecun);
+    flex-wrap: wrap; /* quebra de linha */
+    justify-content: flex-start; /* alinha os itens a esquerda */
+    margin: 0 auto;
+    width: 84%;
+}
+
+article 
+{
+    font-family: sans-serif;
+    flex-grow: 1;  /* crescimento flexivel */
+    padding: 25px;
+    width: 272px;  /* largura fixa */
+    max-width: 650px; /* largura maxima */
+}
+
+p
+{
+    font-weight: bold; /* peso da fonte */
+    text-align: center;
+    color: gray;
+}
+
+img 
+{
+    width: 100%;
+    max-width: 650px;
+    height: auto; /* altura automatica */
+}
+
+@media (max-width: 650px) 
+{
+   
+    header ul, li, a
+    {
+        display: block; /* exibe os elementos como blocos */
+        font-size: 36px;
+    }
+    
+    header .logo
+    {
+        font-size: 42px;
+    }
+   
+    article
+    {
+        max-width: 100%;
+    }
+
+    section
+    {
+        width: 92%;
+    }
+}
